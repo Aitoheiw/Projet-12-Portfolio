@@ -1,8 +1,17 @@
+import KoreanImg from "../assets/projetImg/Capture korean.png";
+import BookiImg from "../assets/projetImg/Capture Booki.png";
+import OhMyImg from "../assets/projetImg/Capture-OhMyFood.png";
+import PrintImg from "../assets/projetImg/Capture-Print.png";
+import SophieImg from "../assets/projetImg/Capture-Sophie.png";
+import KasaImg from "../assets/projetImg/Capture-Kasa.png";
+import NinaImg from "../assets/projetImg/Capture-Nina.png";
+import EventsImg from "../assets/projetImg/Capture-Events.png";
+import ArgentImg from "../assets/projetImg/Capture-Argent.png";
+import QwentaImg from "../assets/projetImg/Capture-Qwenta.png";
+
 const SLIDES = [
   {
-    src: "https://images.unsplash.com/photo-1659733582156-d2a11801e59f?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: KoreanImg,
     h2: "Korean Flashcards",
     h5: "learn Korean the fun way",
     tech: ["React", "JavaScript", "CSS"],
@@ -10,9 +19,7 @@ const SLIDES = [
       " Ce projet est une application de cartes mémoire conçue pour aider les utilisateurs à apprendre le coréen de manière interactive et ludique. L'application offre des fonctionnalités de révision. Avec une interface conviviale, cette application vise à rendre l'apprentissage du coréen accessible et agréable pour tous les niveaux.",
   },
   {
-    src: "https://images.unsplash.com/photo-1543362137-5df0547b039d?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: BookiImg,
     h2: "Booki",
     h5: "Site de réservation de logements",
     tech: ["HTML", "CSS"],
@@ -20,9 +27,7 @@ const SLIDES = [
       " Ce projet a pour but d'explorer les concepts fondamentaux du HTML et du CSS en créant une application de réservation de logements",
   },
   {
-    src: "https://images.unsplash.com/photo-1631142260228-305ccb610dba?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: OhMyImg,
     h2: "Oh My Food",
     h5: "Site de réservation de repas",
     tech: ["HTML", "SCSS"],
@@ -30,9 +35,7 @@ const SLIDES = [
       " Ce projet vise à approfondir les compétences en HTML et CSS, en particulier avec l'utilisation de SCSS pour la gestion des styles. L'application permet aux utilisateurs de parcourir un menu de repas et de passer des commandes en ligne.",
   },
   {
-    src: "https://images.unsplash.com/photo-1708022766976-49ca46c0f7de?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: PrintImg,
     h2: "Print It",
     h5: "Site d'impression",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -40,9 +43,7 @@ const SLIDES = [
       " Ce projet avais pour but d'introduire javaScript dans notre workflow de développement web.",
   },
   {
-    src: "https://images.unsplash.com/photo-1631142260079-970258649676?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: SophieImg,
     h2: "Sophie Bluel",
     h5: "Portfolio d'une designer",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -50,9 +51,7 @@ const SLIDES = [
       " Ce pprojet visait a approfondire nos compétences en JavaScript en créant un portfolio interactif pour une photographe fictive.",
   },
   {
-    src: "https://images.unsplash.com/photo-1708022809820-2668e65877b9?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: KasaImg,
     h2: "KASA",
     h5: "Plateforme de location immobilière",
     tech: ["React", "CSS"],
@@ -60,9 +59,7 @@ const SLIDES = [
       " Premier projet en ReactJS visant à créer une plateforme de location immobilière",
   },
   {
-    src: "https://images.unsplash.com/photo-1708022796522-ff65b57439de?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: NinaImg,
     h2: "Nina Carducci",
     h5: "Portfolio d'une photographe",
     tech: ["React", "JavaScript"],
@@ -70,9 +67,7 @@ const SLIDES = [
       " Ce projet visait à nous introduire a l'optimisation des performances dans les applications React.",
   },
   {
-    src: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: EventsImg,
     h2: "724 Events",
     h5: "Plateforme de gestion d'événements",
     tech: ["React", "JavaScript"],
@@ -80,9 +75,7 @@ const SLIDES = [
       " Ce projet visait a nous introduire a la correction de bug de leur localisation jusqu'a leur resolution dans une application React.",
   },
   {
-    src: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: ArgentImg,
     h2: "Argent Bank",
     h5: "Application bancaire en ligne",
     tech: ["React", "Redux", "JavaScript"],
@@ -91,9 +84,7 @@ const SLIDES = [
   },
 
   {
-    src: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p1: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
-    p2: "https://images.unsplash.com/photo-1708022790103-a514cb89a034?q=50&w=1600",
+    src: QwentaImg,
     h2: "Qwenta",
     h5: "Gestion de projets",
     tech: ["Aucune technologie spécifiée"],

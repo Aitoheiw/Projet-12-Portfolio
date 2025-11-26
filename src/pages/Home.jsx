@@ -3,6 +3,7 @@ import Cards from "../components/Cards";
 import ProjectPage from "./ProjectPage";
 import projet from "../data/projet";
 import Nav from "../components/Nav";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -74,6 +75,8 @@ export default function Home() {
       </header>
 
       <Cards onCardClick={handleCardClick} />
+
+      <ScrollToTopButton />
 
       <footer className="mt-12 text-center text-gray-400 pb-2">
         <p>&copy; 2025 Lucas Charlet. All rights reserved.</p>

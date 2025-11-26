@@ -19,9 +19,12 @@ export default function Card({ src, h2, h5, id, onClick }) {
           isHovered ? "opacity-100" : "opacity-80"
         }`}
       >
-        <div className="absolute bottom-[calc(100%-55%)] w-full left-0 right-0 p-6 text-white">
-          <h2 className="text-2xl font-bold mb-2">{h2}</h2>
-          <h5 className="text-sm text-gray-200">{h5}</h5>
+        <div
+          className="absolute bottom-[calc(100%-55%)] w-full left-0 right-0 p-6 
+     text-white bg-black/30 backdrop-blur-md rounded-lg"
+        >
+          <h2 className="text-2xl md:text-4xl font-bold mb-2">{h2}</h2>
+          <h5 className="text-sm md:text-xl text-gray-200">{h5}</h5>
         </div>
       </div>
     </div>
