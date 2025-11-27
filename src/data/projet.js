@@ -16,80 +16,80 @@ const SLIDES = [
     h5: "learn Korean the fun way",
     tech: ["React", "JavaScript", "CSS"],
     description:
-      " Ce projet est une application de cartes mémoire conçue pour aider les utilisateurs à apprendre le coréen de manière interactive et ludique. L'application offre des fonctionnalités de révision. Avec une interface conviviale, cette application vise à rendre l'apprentissage du coréen accessible et agréable pour tous les niveaux.",
+      " This project is a flashcard application designed to help users learn Korean in an interactive and fun way. The app provides review features, and with its user-friendly interface, it aims to make learning Korean accessible and enjoyable for all levels.",
   },
   {
     src: BookiImg,
     h2: "Booki",
-    h5: "Site de réservation de logements",
+    h5: "Housing booking website",
     tech: ["HTML", "CSS"],
     description:
-      " Ce projet a pour but d'explorer les concepts fondamentaux du HTML et du CSS en créant une application de réservation de logements",
+      " This project aims to explore the fundamental concepts of HTML and CSS by creating a housing booking application.",
   },
   {
     src: OhMyImg,
     h2: "Oh My Food",
-    h5: "Site de réservation de repas",
+    h5: "Meal booking website",
     tech: ["HTML", "SCSS"],
     description:
-      " Ce projet vise à approfondir les compétences en HTML et CSS, en particulier avec l'utilisation de SCSS pour la gestion des styles. L'application permet aux utilisateurs de parcourir un menu de repas et de passer des commandes en ligne.",
+      " This project aims to deepen HTML and CSS skills, particularly through the use of SCSS for style management. The application allows users to browse a meal menu and place orders online.",
   },
   {
     src: PrintImg,
     h2: "Print It",
-    h5: "Site d'impression",
+    h5: "Printing website",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
-      " Ce projet avais pour but d'introduire javaScript dans notre workflow de développement web.",
+      " This project aimed to introduce JavaScript into our web development workflow.",
   },
   {
     src: SophieImg,
     h2: "Sophie Bluel",
-    h5: "Portfolio d'une designer",
+    h5: "Designer’s portfolio",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
-      " Ce pprojet visait a approfondire nos compétences en JavaScript en créant un portfolio interactif pour une photographe fictive.",
+      " This project aimed to deepen our JavaScript skills by creating an interactive portfolio for a fictional designer",
   },
   {
     src: KasaImg,
     h2: "KASA",
-    h5: "Plateforme de location immobilière",
+    h5: "Real estate rental platform",
     tech: ["React", "CSS"],
     description:
-      " Premier projet en ReactJS visant à créer une plateforme de location immobilière",
+      " This was our first ReactJS project, aimed at creating a real estate rental platform.",
   },
   {
     src: NinaImg,
     h2: "Nina Carducci",
-    h5: "Portfolio d'une photographe",
+    h5: "Photographer’s portfolio",
     tech: ["React", "JavaScript"],
     description:
-      " Ce projet visait à nous introduire a l'optimisation des performances dans les applications React.",
+      " This project introduced us to performance optimization in React applications.",
   },
   {
     src: EventsImg,
     h2: "724 Events",
-    h5: "Plateforme de gestion d'événements",
+    h5: "Event management platform",
     tech: ["React", "JavaScript"],
     description:
-      " Ce projet visait a nous introduire a la correction de bug de leur localisation jusqu'a leur resolution dans une application React.",
+      " This project introduced us to bug fixing, from identifying issues to resolving them within a React application.",
   },
   {
     src: ArgentImg,
     h2: "Argent Bank",
-    h5: "Application bancaire en ligne",
+    h5: "Online banking application",
     tech: ["React", "Redux", "JavaScript"],
     description:
-      " Ce projet visait a nous introduire a la gestion d'état avec Redux dans une application React.",
+      " This project introduced us to state management with Redux in a React application.",
   },
 
   {
     src: QwentaImg,
     h2: "Qwenta",
-    h5: "Gestion de projets",
-    tech: ["Aucune technologie spécifiée"],
+    h5: "Project management",
+    tech: ["Canva", "Notion", "Word", "Wakelet"],
     description:
-      " Ce projet visait a nous introduire a la gestion de projet en équipe avec des méthodologies agiles.",
+      " This project introduced us to team-based project management using agile methodologies.",
   },
 ];
 export default SLIDES;

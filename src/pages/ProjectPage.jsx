@@ -18,7 +18,7 @@ export default function ProjectPage({ project, onBack }) {
             d="M15 19l-7-7 7-7"
           />
         </svg>
-        Retour
+        Back
       </button>
 
       <div className="relative h-96 overflow-hidden">
@@ -41,7 +41,7 @@ export default function ProjectPage({ project, onBack }) {
       <div className="max-w-4xl mx-auto px-8 py-16">
         <section className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-6">
-            À propos du projet
+            About the project
           </h2>
           <p className="text-gray-300 text-xl leading-relaxed mb-4">
             {project.description}
