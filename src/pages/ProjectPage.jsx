@@ -38,7 +38,7 @@ export default function ProjectPage({ project, onBack }) {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-8 py-16">
+      <main className=" flex flex-col items-center w-screen px-8 py-16">
         <section className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-6">
             About the project
@@ -60,6 +60,24 @@ export default function ProjectPage({ project, onBack }) {
               </span>
             ))}
           </div>
+        </section>
+
+        <section className="w-screen">
+          <h3 className="text-4xl font-bold text-white mb-6">Liens</h3>
+
+          {project.links.map((link) => {
+            const [label, url] = link.split(": ");
+
+            return (
+              <p
+                key={link}
+                className="text-gray-300 text-sm md:text-xl mb-4 wrap-break-word pl-2 pr-2"
+              >
+                <strong className="font-bold">{label}:</strong>{" "}
+                <span>{url}</span>
+              </p>
+            );
+          })}
         </section>
       </main>
     </div>
