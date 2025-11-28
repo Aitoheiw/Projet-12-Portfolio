@@ -6,7 +6,7 @@ export default function Nav() {
   };
 
   return (
-    <nav>
+    <nav className="select-none">
       <ul className="flex justify-end gap-12 text-xl text-white font-bold hover:cursor-pointer mr-5">
         <li>
           <Link

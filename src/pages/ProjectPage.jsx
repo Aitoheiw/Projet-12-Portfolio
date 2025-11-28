@@ -3,7 +3,7 @@ export default function ProjectPage({ project, onBack }) {
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
         onClick={onBack}
-        className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference"
+        className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference select-none hover:cursor-pointer"
       >
         <svg
           className="w-5 h-5"
@@ -21,7 +21,7 @@ export default function ProjectPage({ project, onBack }) {
         Back
       </button>
 
-      <header className="relative h-96 overflow-hidden">
+      <header className="relative h-96 overflow-hidden select-none">
         <img
           src={project.src}
           alt={project.h2}
@@ -39,7 +39,7 @@ export default function ProjectPage({ project, onBack }) {
       </header>
 
       <main className=" flex flex-col items-center w-screen px-8 py-16">
-        <section className="mb-12">
+        <section className="mb-12 select-none">
           <h2 className="text-4xl font-bold text-white mb-6">
             About the project
           </h2>
@@ -48,7 +48,7 @@ export default function ProjectPage({ project, onBack }) {
           </p>
         </section>
 
-        <section className="mb-12 flex flex-col gap-4">
+        <section className="mb-12 flex flex-col gap-4 select-none">
           <h3 className="text-4xl font-bold text-white mb-6">Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {project.tech.map((tech) => (
@@ -63,7 +63,9 @@ export default function ProjectPage({ project, onBack }) {
         </section>
 
         <section className="w-screen">
-          <h3 className="text-4xl font-bold text-white mb-6">Liens</h3>
+          <h3 className="text-4xl font-bold text-white mb-6 select-none">
+            Liens
+          </h3>
 
           {project.links.map((link) => {
             const [label, url] = link.split(": ");
@@ -73,7 +75,7 @@ export default function ProjectPage({ project, onBack }) {
                 key={link}
                 className="text-gray-300 text-sm md:text-xl mb-4 wrap-break-word pl-2 pr-2"
               >
-                <strong className="font-bold">{label}:</strong>{" "}
+                <strong className="font-bold select-none">{label}:</strong>{" "}
                 <span>{url}</span>
               </p>
             );
