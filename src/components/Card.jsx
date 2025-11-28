@@ -6,11 +6,9 @@ export default function Card({ src, h2, p, id, onClick }) {
   return (
     <article
       onClick={() => onClick?.(id)}
-      className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-300"
+      className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-100"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      role="button"
-      tabIndex={0}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick?.(id)}
     >
       <img src={src} alt={h2} className="w-screen h-150 object-cover" />

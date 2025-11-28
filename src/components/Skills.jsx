@@ -1,12 +1,10 @@
-import ReturnBnt from "../components/ReturnBnt";
-import ScrollToTopButton from "../components/ScrollToTopButton";
 import SkillCards from "../components/SkillCards";
 import skills from "../data/skills";
 export default function Skills() {
   return (
-    <section className="flex gap-10 flex-wrap justify-center mt-10 md:mt-50">
-      <ReturnBnt />
-      <main>
+    <section className="mt-10 mb-20 border-t border-white pt-10">
+      <h2 className="text-3xl mb-10 mt-5 font-bold">Skills</h2>
+      <article className="flex gap-10 flex-wrap justify-center ">
         {skills.map((skill, index) => (
           <SkillCards
             key={index}
@@ -15,8 +13,7 @@ export default function Skills() {
             src={skill.src}
           />
         ))}
-      </main>
-      <ScrollToTopButton />
+      </article>
     </section>
   );
 }

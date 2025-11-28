@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   const handleNavClick = () => {
-    // On considère que c'est une nouvelle “session” de Home
     sessionStorage.removeItem("homeScroll");
   };
 
@@ -24,16 +23,7 @@ export default function Nav() {
             onClick={handleNavClick}
             className="inline-block text-inherit transition duration-300 ease-in-out hover:underline hover:scale-150"
           >
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/About"
-            onClick={handleNavClick}
-            className="inline-block text-inherit transition duration-300 ease-in-out hover:underline hover:scale-150"
-          >
-            About
+            Contact
           </Link>
         </li>
       </ul>

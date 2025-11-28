@@ -6,6 +6,8 @@ import Nav from "../components/Nav";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
+import About from "../components/About";
+import Skills from "../components/Skills";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -65,7 +67,8 @@ export default function Home() {
       <Nav />
       <main>
         <Header />
-
+        <About />
+        <Skills />
         <Cards onCardClick={handleCardClick} />
 
         <ScrollToTopButton />

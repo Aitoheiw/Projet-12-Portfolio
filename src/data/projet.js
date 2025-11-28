@@ -11,6 +11,22 @@ import QwentaImg from "../assets/projetImg/Capture-Qwenta.png";
 
 const SLIDES = [
   {
+    src: ArgentImg,
+    h2: "Argent Bank",
+    p: "Online banking application",
+    tech: ["React", "Redux", "JavaScript"],
+    description:
+      " This project introduced us to state management with Redux in a React application.",
+  },
+  {
+    src: QwentaImg,
+    h2: "Qwenta",
+    p: "Project management",
+    tech: ["Canva", "Notion", "Word", "Wakelet"],
+    description:
+      " This project introduced us to team-based project management using agile methodologies.",
+  },
+  {
     src: KoreanImg,
     h2: "Korean Flashcards",
     p: "learn Korean the fun way",
@@ -19,14 +35,6 @@ const SLIDES = [
       " This project is a flashcard application designed to help users learn Korean in an interactive and fun way. The app provides review features, and with its user-friendly interface, it aims to make learning Korean accessible and enjoyable for all levels.",
   },
 
-  {
-    src: ArgentImg,
-    h2: "Argent Bank",
-    p: "Online banking application",
-    tech: ["React", "Redux", "JavaScript"],
-    description:
-      " This project introduced us to state management with Redux in a React application.",
-  },
   {
     src: BookiImg,
     h2: "Booki",
@@ -82,15 +90,6 @@ const SLIDES = [
     tech: ["React", "JavaScript"],
     description:
       " This project introduced us to bug fixing, from identifying issues to resolving them within a React application.",
-  },
-
-  {
-    src: QwentaImg,
-    h2: "Qwenta",
-    p: "Project management",
-    tech: ["Canva", "Notion", "Word", "Wakelet"],
-    description:
-      " This project introduced us to team-based project management using agile methodologies.",
   },
 ];
 export default SLIDES;
