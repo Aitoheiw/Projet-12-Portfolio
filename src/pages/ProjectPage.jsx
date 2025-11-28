@@ -3,7 +3,7 @@ export default function ProjectPage({ project, onBack }) {
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
         onClick={onBack}
-        className="fixed top-8 left-8 z-50 px-6 py-3 bg-white/10 hover:bg-white/20 text-white mix-blend-difference rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
+        className="fixed top-8 left-8 z-50 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
       >
         <svg
           className="w-5 h-5"
@@ -25,7 +25,7 @@ export default function ProjectPage({ project, onBack }) {
         <img
           src={project.src}
           alt={project.h2}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
         <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-12">

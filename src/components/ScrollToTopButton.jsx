@@ -11,6 +11,7 @@ export default function ScrollToTopButton() {
       // Apparait après 80% du scroll
       setVisible(scrollPosition / totalHeight >= 0.6);
     };
+    sessionStorage.removeItem("homeScroll");
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
