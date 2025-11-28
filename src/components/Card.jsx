@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Card({ src, h2, h5, id, onClick }) {
+export default function Card({ src, h2, p, id, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ export default function Card({ src, h2, h5, id, onClick }) {
      text-white bg-black/30 backdrop-blur-md rounded-lg"
         >
           <h2 className="text-2xl md:text-4xl font-bold mb-2">{h2}</h2>
-          <h5 className="text-sm md:text-xl text-gray-200">{h5}</h5>
+          <p className="text-sm md:text-xl text-gray-200">{p}</p>
         </div>
       </div>
     </div>
