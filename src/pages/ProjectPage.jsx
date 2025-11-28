@@ -3,7 +3,7 @@ export default function ProjectPage({ project, onBack }) {
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
         onClick={onBack}
-        className="fixed top-8 left-8 z-50 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 mix-blend-difference"
+        className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference"
       >
         <svg
           className="w-5 h-5"
