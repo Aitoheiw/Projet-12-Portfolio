@@ -4,18 +4,18 @@ import ProjectPage from "./ProjectPage";
 import projet from "../data/projet";
 import Nav from "../components/Nav";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Toujours contrôler le scroll nous-mêmes
   useEffect(() => {
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
   }, []);
 
-  // Lis le hash au chargement et à chaque retour/arrière (hashchange)
   useEffect(() => {
     const applyFromHash = () => {
       const { hash } = window.location;
@@ -26,30 +26,28 @@ export default function Home() {
           return;
         }
       }
-      // Pas de hash → on est sur l'accueil : restaure le scroll si on l'a
+
       setSelectedProject(null);
       const saved = sessionStorage.getItem("homeScroll");
       if (saved) {
         const y = parseInt(saved, 10);
-        // Attends le paint avant de scroller pour éviter les sauts
+
         requestAnimationFrame(() => window.scrollTo(0, y));
       }
     };
 
-    applyFromHash(); // au premier mount (utile quand on refresh sur un projet)
+    applyFromHash();
     window.addEventListener("hashchange", applyFromHash);
     return () => window.removeEventListener("hashchange", applyFromHash);
   }, []);
 
   const handleCardClick = (projectId) => {
-    // 1) Sauvegarde le scroll actuel de l'accueil
     sessionStorage.setItem("homeScroll", String(window.scrollY));
-    // 2) Encode la navigation dans l’URL
+
     window.location.hash = `project-${projectId}`;
   };
 
   const handleBackToHome = () => {
-    // Revenir à l’accueil → enlève le hash (déclenchera hashchange + restauration du scroll)
     window.location.hash = "";
   };
 
@@ -65,22 +63,14 @@ export default function Home() {
   return (
     <div className="min-h-screen pt-8">
       <Nav />
-      <header className="mb-20 mt-10 flex flex-col items-center gap-5">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-          Lucas Charlet
-        </h1>
-        <p className="text-gray-400 text-lg">
-          Scroll Down to discover my projects
-        </p>
-      </header>
+      <main>
+        <Header />
 
-      <Cards onCardClick={handleCardClick} />
+        <Cards onCardClick={handleCardClick} />
 
-      <ScrollToTopButton />
-
-      <footer className="mt-12 text-center text-gray-400 pb-2">
-        <p>&copy; 2025 Lucas Charlet. All rights reserved.</p>
-      </footer>
+        <ScrollToTopButton />
+      </main>
+      <Footer />
     </div>
   );
 }

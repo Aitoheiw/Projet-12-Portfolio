@@ -4,7 +4,7 @@ export default function Card({ src, h2, p, id, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <article
       onClick={() => onClick?.(id)}
       className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-300"
       onMouseEnter={() => setIsHovered(true)}
@@ -27,6 +27,6 @@ export default function Card({ src, h2, p, id, onClick }) {
           <p className="text-sm md:text-xl text-gray-200">{p}</p>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

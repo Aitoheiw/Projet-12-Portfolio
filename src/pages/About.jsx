@@ -4,9 +4,9 @@ export default function About() {
   return (
     <section>
       <ReturnBnt />
-      <h1 className="text-3xl mb-20 mt-10 z-60">About</h1>
+      <h2 className="text-3xl mb-20 mt-10 z-60">About</h2>
 
-      <div className="flex flex-col mb-10 text-xl md:text-2xl gap-5 font-bold ml-4 mr-4">
+      <main className="flex flex-col mb-10 text-xl md:text-2xl gap-5 font-bold ml-4 mr-4">
         <p>
           My name is Lucas CHARLET.
           <br />
@@ -22,7 +22,7 @@ export default function About() {
           If you want to contact me, you can send me an email at:
           lucascharletttttt@gmail.com
         </p>
-      </div>
+      </main>
     </section>
   );
 }

@@ -3,7 +3,7 @@ export default function ProjectPage({ project, onBack }) {
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
         onClick={onBack}
-        className="fixed top-8 left-8 z-50 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
+        className="fixed top-8 left-8 z-50 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 mix-blend-difference"
       >
         <svg
           className="w-5 h-5"
@@ -21,11 +21,11 @@ export default function ProjectPage({ project, onBack }) {
         Back
       </button>
 
-      <div className="relative h-96 overflow-hidden">
+      <header className="relative h-96 overflow-hidden">
         <img
           src={project.src}
           alt={project.h2}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-12">
@@ -36,9 +36,9 @@ export default function ProjectPage({ project, onBack }) {
             <p className="text-xl lg:text-2xl text-gray-300">{project.h5}</p>
           </div>
         </div>
-      </div>
+      </header>
 
-      <div className="max-w-4xl mx-auto px-8 py-16">
+      <main className="max-w-4xl mx-auto px-8 py-16">
         <section className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-6">
             About the project
@@ -49,7 +49,7 @@ export default function ProjectPage({ project, onBack }) {
         </section>
 
         <section className="mb-12 flex flex-col gap-4">
-          <h2 className="text-4xl font-bold text-white mb-6">Technologies</h2>
+          <h3 className="text-4xl font-bold text-white mb-6">Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {project.tech.map((tech) => (
               <span
@@ -61,7 +61,7 @@ export default function ProjectPage({ project, onBack }) {
             ))}
           </div>
         </section>
-      </div>
+      </main>
     </div>
   );
 }
