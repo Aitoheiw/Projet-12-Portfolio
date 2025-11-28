@@ -53,6 +53,12 @@ export default function Home() {
     window.location.hash = "";
   };
 
+  useEffect(() => {
+    if (selectedProject !== null) {
+      window.scrollTo(0, 0);
+    }
+  }, [selectedProject]);
+
   if (selectedProject !== null) {
     return (
       <ProjectPage
