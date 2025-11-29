@@ -3,6 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import Home from "./pages/Home.jsx";
+import NotFound from "./pages/404.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -11,10 +12,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />} />
         {/* <Route path="/skills" element={<Skills />} /> */}
 
-        <Route
-          path="*"
-          element={<h1 className="text-3xl">Page non trouvée</h1>}
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
