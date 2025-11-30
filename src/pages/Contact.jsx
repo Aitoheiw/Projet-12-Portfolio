@@ -1,19 +1,42 @@
+import { useState } from "react";
 import ReturnBnt from "../components/ReturnBnt";
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function ContactForm() {
+  const [status, setStatus] = useState(null); // "success" | "error" | null
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
-    const data = new FormData(form);
+
+    const data = {
+      "form-name": form.getAttribute("name"), // "contact"
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
 
     try {
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
-        body: data,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data),
       });
-      // succès
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setStatus("success");
+      form.reset();
     } catch (error) {
       console.error(error);
+      setStatus("error");
     }
   };
 
