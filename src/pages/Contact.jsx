@@ -75,7 +75,7 @@ export default function ContactForm() {
         </p>
 
         <label className="flex flex-col gap-1 text-sm text-gray-200">
-          Nom
+          Name
           <input
             type="text"
             name="name"
@@ -108,17 +108,17 @@ export default function ContactForm() {
           type="submit"
           className="mt-2 inline-flex justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors"
         >
-          Envoyer
+          Send
         </button>
 
         {status === "success" && (
           <p className="text-green-400 text-sm mt-2">
-            Merci pour ton message, il a bien été envoyé ✨
+            Thank you for your message, it has been successfully sent ✨
           </p>
         )}
         {status === "error" && (
           <p className="text-red-400 text-sm mt-2">
-            Oups, une erreur s’est produite. Tu peux réessayer un peu plus tard.
+            Oops, something went wrong. You can try again a bit later.
           </p>
         )}
       </form>
