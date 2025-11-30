@@ -1,13 +1,9 @@
-import { useState } from "react";
 import ReturnBnt from "../components/ReturnBnt";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState(null);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
-
     const data = new FormData(form);
 
     try {
@@ -15,11 +11,9 @@ export default function ContactForm() {
         method: "POST",
         body: data,
       });
-      setStatus("success");
-      form.reset();
+      // succès
     } catch (error) {
       console.error(error);
-      setStatus("error");
     }
   };
 
@@ -43,7 +37,6 @@ export default function ContactForm() {
 
       <form
         name="contact"
-        netlify
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
