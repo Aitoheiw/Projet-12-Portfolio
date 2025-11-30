@@ -54,8 +54,8 @@ export default function ContactForm() {
         Contact
       </h2>
       <p className="text-gray-300 mb-4">
-        Tu peux m’envoyer un message via ce formulaire. Je reviendrai vers toi
-        dès que possible.
+        You can send me a message using this form. I will get back to you as
+        soon as possible.
       </p>
 
       <form
