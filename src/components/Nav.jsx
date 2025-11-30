@@ -19,7 +19,7 @@ export default function Nav() {
         </li>
         <li>
           <Link
-            to="/Skills"
+            to="/contact"
             onClick={handleNavClick}
             className="inline-block text-inherit transition duration-300 ease-in-out hover:underline hover:scale-150"
           >
