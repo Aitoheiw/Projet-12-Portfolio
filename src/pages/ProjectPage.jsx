@@ -39,16 +39,48 @@ export default function ProjectPage({ project, onBack }) {
       </header>
 
       <main className=" flex flex-col items-center w-screen px-8 py-16">
-        <section className="mb-12 select-none">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            About the project
-          </h2>
-          <p className="text-gray-300 text-xl leading-relaxed mb-4">
-            {project.description}
-          </p>
-        </section>
+        <div
+          id="wrapper"
+          className="flex flex-col gap-16 max-w-4xl w-full select-none"
+        >
+          <section className="border-b border-white">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              About the project
+            </h2>
+            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+              {project.description}
+            </p>
+          </section>
+          <section className="border-b border-white">
+            <h2 className="text-4xl font-bold text-white mb-6">Context</h2>
+            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+              {project.context}
+            </p>
+          </section>
+          <section className="border-b border-white">
+            <h2 className="text-4xl font-bold text-white mb-6">Objectives</h2>
+            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+              {project.Objectives}
+            </p>
+          </section>
 
-        <section className="mb-12 flex flex-col gap-4 select-none">
+          <section className="border-b border-white">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Skills Developed
+            </h2>
+            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+              {project.SkillsDeveloped}
+            </p>
+          </section>
+
+          <section className="border-b border-white">
+            <h2 className="text-4xl font-bold text-white mb-6">Results</h2>
+            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+              {project.Results}
+            </p>
+          </section>
+        </div>
+        <section className="mb-16 mt-16 flex flex-col gap-4 select-none">
           <h3 className="text-4xl font-bold text-white mb-6">Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {project.tech.map((tech) => (
@@ -61,7 +93,6 @@ export default function ProjectPage({ project, onBack }) {
             ))}
           </div>
         </section>
-
         <section className="w-screen">
           <h3 className="text-4xl font-bold text-white mb-6 select-none">
             Liens
