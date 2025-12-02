@@ -8,13 +8,16 @@ export default function About() {
           My name is Lucas CHARLET.
           <br />
         </p>
-        <p>I am a web developer specializing in front-end development.</p>
-        <p>I have a passion for creating beautiful and functional websites.</p>
+        <p>
+          Front-end developer crafting modern, elegant, and performant web
+          experiences.
+        </p>
+        {/* <p>I have a passion for creating beautiful and functional websites.</p>
         <p>
           I am always learning new technologies and techniques to stay up to
           date with the latest industry trends.
         </p>
-        <p>I started my journey in web development a few months ago.</p>
+        <p>I started my journey in web development a few months ago.</p> */}
       </div>
     </section>
   );
