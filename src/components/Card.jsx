@@ -11,7 +11,12 @@ export default function Card({ src, h2, p, id, onClick }) {
       onMouseLeave={() => setIsHovered(false)}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick?.(id)}
     >
-      <img src={src} alt={h2} className="w-screen h-150 object-cover" />
+      <img
+        src={src}
+        alt={h2}
+        className="w-screen h-150 object-cover"
+        loading="lazy"
+      />
       <div
         className={`absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent transition-opacity duration-300 ${
           isHovered ? "opacity-100" : "opacity-80"
