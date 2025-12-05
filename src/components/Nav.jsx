@@ -7,7 +7,7 @@ export default function Nav() {
 
   return (
     <nav className="select-none">
-      <ul className="flex justify-end gap-12 text-xl text-white font-bold hover:cursor-pointer mr-5">
+      <ul className="flex justify-end gap-12 text-xl text-shadow-zinc-800 dark:text-white font-bold hover:cursor-pointer mr-5">
         <li>
           <a
             href="#projects"
