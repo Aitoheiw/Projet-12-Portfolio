@@ -7,7 +7,7 @@ import NotFound from "./pages/404.jsx";
 import ContactForm from "./pages/Contact.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <StrictMode className="bg-white dark:bg-zinc-800 dark:text-white">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
