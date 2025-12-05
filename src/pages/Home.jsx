@@ -69,7 +69,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen w-screen pt-8 bg-white dark:bg-zinc-800 dark:text-white">
+    <div className="min-h-screen pt-8 bg-white dark:bg-zinc-800 dark:text-white">
       <Nav />
       <main>
         <Header />
