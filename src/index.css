@@ -1,5 +1,6 @@
 @import "tailwindcss";
 :root {
+  color-scheme: light dark;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -10,10 +11,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html,
 body {
   margin: 0;
+  min-height: 100%;
+}
+
+body {
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background-color: white;
+    color: #111827;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: oklch(27.4% 0.006 286.033);
+    color: white;
+  }
 }
