@@ -12,23 +12,51 @@ import QwentaImg from "../assets/projetImg/Capture-Qwenta.png";
 const SLIDES = [
   {
     src: ArgentImg,
-    h2: "Argent Bank",
-    p: "Online banking application",
     tech: ["React", "Redux", "JavaScript"],
-    description:
-      "Argent Bank is an online banking platform aiming to expand within the digital finance sector. As a Front-End Developer, I collaborated with the project manager to implement the user dashboard and build a secure authentication system. The project required mastering React, Redux, API integration, and Green Code best practices while working in a professional environment with strict deadlines.",
-
-    context:
-      "Upon joining Argent Bank, I worked with the project manager, on delivering the new authentication system and user dashboard. The CTO, provided detailed requirements for two development phases. Phase 1 focused on the full React application with user login, logout, protected routes, and profile management using Redux. The backend engineers already provided the API routes along with Swagger documentation. In Phase 2, I was asked to recommend how the new transaction system should be modeled at the API level and to produce a complete Swagger YAML proposal for endpoints related to viewing, editing, and managing transaction details.",
-
-    Objectives:
-      "Build a complete responsive React application following the provided mockups. Implement full authentication: login, logout, error handling, and protected routes. Ensure that users can view and edit their display name only after a successful login. Use Redux to manage global state and ensure scalability for the upcoming transaction features. Apply Green Code practices by optimizing images and creating reusable UI components. For Phase 2, propose the backend API architecture for the transaction system and deliver a full Swagger specification in YAML format.",
-
-    SkillsDeveloped:
-      "Front-End Development: React architecture, component-based design, reusable UI patterns, responsive layouts, image optimization, and clean code practices. State Management: Implementing Redux for authentication and user session handling, preparing the application for larger datasets. API Integration: Understanding Swagger documentation, integrating backend routes, handling protected data, error states, and user flows. Technical Documentation: Designing and writing a full API proposal in Swagger YAML covering HTTP methods, routes, parameters, and response codes. Professional Collaboration: Working with a CTO, project manager, and backend team to meet strict deadlines and deliver a scalable foundation for future banking features.",
-
-    Results:
-      "A fully functional and responsive React application with secure authentication and protected user access. A robust Redux state architecture supporting login, logout, persistent sessions, and profile updates. Clean and optimized front-end code aligned with Green Code standards. A complete API proposal for the upcoming transaction system, written in Swagger YAML with all methods, routes, parameters, and expected responses. A solid technical base for the next development phases of Argent Bank’s dashboard.",
+    translations: {
+      fr: {
+        h2: "Argent Bank",
+        p: "Application de banque en ligne",
+        description:
+          "Argent Bank est une plateforme bancaire en ligne souhaitant se développer dans le secteur de la finance numérique. En tant que développeur Front-End, j’ai collaboré avec le chef de projet pour mettre en place le tableau de bord utilisateur et concevoir un système d’authentification sécurisé. Le projet a nécessité la maîtrise de React, Redux, l’intégration d’API, ainsi que des bonnes pratiques de Green Code, le tout dans un environnement professionnel avec des délais stricts.",
+        context:
+          "En rejoignant Argent Bank, j’ai travaillé avec le chef de projet à la livraison du nouveau système d’authentification et du tableau de bord utilisateur. Le CTO a fourni des exigences détaillées pour deux phases de développement. La première phase portait sur l’application complète en React avec la connexion, la déconnexion, les routes protégées et la gestion du profil via Redux. Les ingénieurs backend avaient déjà fourni les routes API ainsi que la documentation Swagger. Dans la deuxième phase, on m’a demandé de recommander la manière dont le nouveau système de transactions devrait être modélisé au niveau de l’API et de produire une proposition complète en Swagger YAML pour les endpoints liés à la consultation, la modification et la gestion des détails des transactions.",
+        Objectives:
+          "Créez une application React complète et responsive en suivant les maquettes fournies. Implémentez une authentification complète : connexion, déconnexion, gestion des erreurs et routes protégées. Assurez-vous que les utilisateurs puissent consulter et modifier leur nom d’affichage uniquement après une connexion réussie. Utilisez Redux pour gérer l’état global et garantir la scalabilité en vue des futures fonctionnalités de gestion des transactions. Appliquez les principes de Green Code en optimisant les images et en créant des composants d’interface réutilisables. Pour la phase 2, proposez l’architecture de l’API backend pour le système de transactions et livrez une spécification Swagger complète au format YAML.",
+        SkillsDeveloped:
+          "Front-End Development : architecture React, conception basée sur les composants, modèles d’interface réutilisables, mises en page responsives, optimisation des images et bonnes pratiques de code propre. State Management : implémentation de Redux pour l’authentification et la gestion des sessions utilisateur, préparation de l’application à des jeux de données plus volumineux. API Integration : compréhension de la documentation Swagger, intégration des routes backend, gestion des données protégées, des états d’erreur et des parcours utilisateurs. Technical Documentation : conception et rédaction d’une proposition d’API complète en Swagger YAML couvrant les méthodes HTTP, les routes, les paramètres et les codes de réponse. Professional Collaboration : travail avec un CTO, un chef de projet et une équipe backend pour respecter des délais stricts et fournir une base scalable pour de futures fonctionnalités bancaires.",
+        Results:
+          "Une application React entièrement fonctionnelle et responsive, avec une authentification sécurisée et un accès utilisateur protégé. Une architecture d’état Redux robuste prenant en charge la connexion, la déconnexion, les sessions persistantes et la mise à jour du profil. Un code front-end propre et optimisé, conforme aux principes du Green Code. Une proposition d’API complète pour le futur système de transactions, rédigée en Swagger YAML avec l’ensemble des méthodes, routes, paramètres et réponses attendues. Une base technique solide pour les prochaines phases de développement du tableau de bord d’Argent Bank.",
+      },
+      en: {
+        h2: "Argent Bank",
+        p: "Online banking application",
+        description:
+          "Argent Bank is an online banking platform aiming to expand within the digital finance sector. As a Front-End Developer, I collaborated with the project manager to implement the user dashboard and build a secure authentication system. The project required mastering React, Redux, API integration, and Green Code best practices while working in a professional environment with strict deadlines.",
+        context:
+          "Upon joining Argent Bank, I worked with the project manager, on delivering the new authentication system and user dashboard. The CTO, provided detailed requirements for two development phases. Phase 1 focused on the full React application with user login, logout, protected routes, and profile management using Redux. The backend engineers already provided the API routes along with Swagger documentation. In Phase 2, I was asked to recommend how the new transaction system should be modeled at the API level and to produce a complete Swagger YAML proposal for endpoints related to viewing, editing, and managing transaction details.",
+        Objectives:
+          "Build a complete responsive React application following the provided mockups. Implement full authentication: login, logout, error handling, and protected routes. Ensure that users can view and edit their display name only after a successful login. Use Redux to manage global state and ensure scalability for the upcoming transaction features. Apply Green Code practices by optimizing images and creating reusable UI components. For Phase 2, propose the backend API architecture for the transaction system and deliver a full Swagger specification in YAML format.",
+        SkillsDeveloped:
+          "Front-End Development: React architecture, component-based design, reusable UI patterns, responsive layouts, image optimization, and clean code practices. State Management: Implementing Redux for authentication and user session handling, preparing the application for larger datasets. API Integration: Understanding Swagger documentation, integrating backend routes, handling protected data, error states, and user flows. Technical Documentation: Designing and writing a full API proposal in Swagger YAML covering HTTP methods, routes, parameters, and response codes. Professional Collaboration: Working with a CTO, project manager, and backend team to meet strict deadlines and deliver a scalable foundation for future banking features.",
+        Results:
+          "A fully functional and responsive React application with secure authentication and protected user access. A robust Redux state architecture supporting login, logout, persistent sessions, and profile updates. Clean and optimized front-end code aligned with Green Code standards. A complete API proposal for the upcoming transaction system, written in Swagger YAML with all methods, routes, parameters, and expected responses. A solid technical base for the next development phases of Argent Bank’s dashboard.",
+      },
+      ko: {
+        h2: "Argent Bank",
+        p: "온라인 라이닝 앱",
+        description:
+          "Argent Bank는 디지털 금융 분야에서 성장하고자 하는 온라인 은행 플랫폼입니다. 프론트엔드 개발자로서 저는 프로젝트 매니저와 협력하여 사용자 대시보드를 구축하고 안전한 인증 시스템을 설계했습니다. 이 프로젝트는 React, Redux, API 연동, 그리고 그린 코드(Green Code) 모범 사례에 대한 높은 이해를 요구했으며, 엄격한 마감 기한이 있는 전문적인 환경에서 진행되었습니다.",
+        context:
+          "아르젠트 뱅크에 합류한 후, 나는 프로젝트 매니저와 함께 새로운 인증 시스템과 사용자 대시보드를 구현하는 작업을 진행했습니다. CTO는 두 단계의 개발을 위한 상세한 요구 사항을 제공했습니다. 1단계에서는 로그인, 로그아웃, 보호된 경로, Redux를 활용한 프로필 관리가 포함된 전체 React 애플리케이션 개발에 집중했습니다. 백엔드 엔지니어들은 이미 API 라우트와 Swagger 문서를 제공한 상태였습니다. 2단계에서는 새로운 거래 시스템을 API 수준에서 어떻게 모델링해야 하는지에 대한 제안을 요청받았으며, 거래 상세 조회, 수정, 관리에 관련된 엔드포인트를 위한 완전한 Swagger YAML 제안서를 작성해야 했습니다.",
+        Objectives:
+          "제공된 목업을 기반으로 반응형 React 애플리케이션을 완성하세요. 로그인, 로그아웃, 에러 처리, 보호된 라우트를 포함한 전체 인증 기능을 구현해야 합니다. 사용자는 로그인에 성공한 이후에만 자신의 표시 이름을 조회하고 수정할 수 있어야 합니다. 전역 상태 관리를 위해 Redux를 사용하여 향후 추가될 거래 기능을 고려한 확장성을 보장하세요. 이미지를 최적화하고 재사용 가능한 UI 컴포넌트를 생성하여 그린 코드 원칙을 적용합니다. 2단계에서는 거래 시스템을 위한 백엔드 API 아키텍처를 제안하고, 거래 조회·수정·관리와 관련된 엔드포인트를 포함한 전체 Swagger 사양을 YAML 형식으로 제공해야 합니다.",
+        SkillsDeveloped:
+          "Front-End Development: React 아키텍처, 컴포넌트 기반 설계, 재사용 가능한 UI 패턴, 반응형 레이아웃, 이미지 최적화 및 클린 코드 실천. State Management: 인증과 사용자 세션 관리를 위한 Redux 구현, 더 큰 데이터셋을 처리할 수 있도록 애플리케이션을 준비. API Integration: Swagger 문서 이해, 백엔드 라우트 연동, 보호된 데이터와 에러 상태, 사용자 플로우 처리. Technical Documentation: HTTP 메서드, 라우트, 파라미터, 응답 코드를 모두 포함하는 전체 API 제안을 Swagger YAML 형식으로 설계 및 작성. Professional Collaboration: CTO, 프로젝트 매니저, 백엔드 팀과 협업하여 엄격한 마감 기한을 맞추고, 향후 뱅킹 기능을 위한 확장 가능한 기반을 구축.",
+        Results:
+          "보안 인증과 보호된 사용자 접근을 제공하는 완전한 기능의 반응형 React 애플리케이션. 로그인, 로그아웃, 지속 세션, 프로필 업데이트를 지원하는 견고한 Redux 상태 아키텍처. 그린 코드 기준에 맞게 작성된 깔끔하고 최적화된 프론트엔드 코드. 향후 거래 시스템을 위해 모든 메서드, 라우트, 파라미터, 예상 응답을 포함하여 Swagger YAML로 작성된 완전한 API 제안서. 아르젠트 뱅크 대시보드의 다음 개발 단계를 위한 탄탄한 기술적 기반.",
+      },
+    },
 
     links: [
       "GitHub: https://github.com/Aitoheiw/Projet_10_ArgentBank-Frontend",

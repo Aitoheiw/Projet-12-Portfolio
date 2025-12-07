@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
-export default function Card({ src, h2, p, id, onClick }) {
+export default function Card({ src, h2, p, translations, id, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
+  const { lang } = useLanguage(); // 👈 ICI le bon nom
+
+  // Fallback : si pas de traductions → utiliser h2/p normaux
+  const t = translations?.[lang] || { h2, p };
 
   return (
     <article
@@ -13,10 +18,11 @@ export default function Card({ src, h2, p, id, onClick }) {
     >
       <img
         src={src}
-        alt={h2}
+        alt={t.h2}
         className="w-screen h-150 object-cover"
         loading="lazy"
       />
+
       <div
         className={`absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent transition-opacity duration-300 ${
           isHovered ? "opacity-100" : "opacity-80"
@@ -24,10 +30,10 @@ export default function Card({ src, h2, p, id, onClick }) {
       >
         <div
           className="absolute bottom-[calc(100%-55%)] w-full left-0 right-0 p-6 
-     text-white bg-black/30 backdrop-blur-md rounded-lg"
+          text-white bg-black/30 backdrop-blur-md rounded-lg"
         >
-          <h2 className="text-2xl md:text-4xl font-bold mb-2">{h2}</h2>
-          <p className="text-sm md:text-xl text-gray-200">{p}</p>
+          <h2 className="text-2xl md:text-4xl font-bold mb-2">{t.h2}</h2>
+          <p className="text-sm md:text-xl text-gray-200">{t.p}</p>
         </div>
       </div>
     </article>

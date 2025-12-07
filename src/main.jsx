@@ -5,15 +5,18 @@ import "./index.css";
 import Home from "./pages/Home.jsx";
 import NotFound from "./pages/404.jsx";
 import ContactForm from "./pages/Contact.jsx";
+import { LanguageProvider } from "./context/LanguageContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<ContactForm />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <LanguageProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </LanguageProvider>
     </BrowserRouter>
   </StrictMode>
 );

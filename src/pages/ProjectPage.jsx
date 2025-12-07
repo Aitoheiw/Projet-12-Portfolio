@@ -1,4 +1,20 @@
+import { useLanguage } from "../hooks/useLanguage";
+
 export default function ProjectPage({ project, onBack }) {
+  const { lang } = useLanguage();
+
+  // Traductions spécifiques au projet (si elles existent)
+  const tr = project.translations?.[lang];
+
+  // Fallback : on utilise les champs originaux si pas de traduction
+  const title = tr?.h2 || project.h2;
+  const subtitle = tr?.h5 || project.h5;
+  const description = tr?.description || project.description;
+  const context = tr?.context || project.context;
+  const objectives = tr?.Objectives || project.Objectives;
+  const skills = tr?.SkillsDeveloped || project.SkillsDeveloped;
+  const results = tr?.Results || project.Results;
+
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
@@ -24,16 +40,16 @@ export default function ProjectPage({ project, onBack }) {
       <header className="relative h-96 overflow-hidden select-none">
         <img
           src={project.src}
-          alt={project.h2}
+          alt={title}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-12">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-4">
-              {project.h2}
+              {title}
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300">{project.h5}</p>
+            <p className="text-xl lg:text-2xl text-gray-300">{subtitle}</p>
           </div>
         </div>
       </header>
@@ -48,19 +64,21 @@ export default function ProjectPage({ project, onBack }) {
               About the project
             </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
-              {project.description}
+              {description}
             </p>
           </section>
+
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">Context</h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
-              {project.context}
+              {context}
             </p>
           </section>
+
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">Objectives</h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
-              {project.Objectives}
+              {objectives}
             </p>
           </section>
 
@@ -69,17 +87,18 @@ export default function ProjectPage({ project, onBack }) {
               Skills Developed
             </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
-              {project.SkillsDeveloped}
+              {skills}
             </p>
           </section>
 
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">Results</h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
-              {project.Results}
+              {results}
             </p>
           </section>
         </div>
+
         <section className="mb-16 mt-16 flex flex-col gap-4 select-none">
           <h3 className="text-4xl font-bold text-white mb-6">Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
@@ -93,9 +112,10 @@ export default function ProjectPage({ project, onBack }) {
             ))}
           </div>
         </section>
+
         <section className="w-screen">
           <h3 className="text-4xl font-bold text-white mb-6 select-none">
-            Liens
+            Links
           </h3>
 
           {project.links.map((link) => {

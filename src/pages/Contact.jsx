@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReturnBnt from "../components/ReturnBnt";
+import { useLanguage } from "../hooks/useLanguage";
 
 function encode(data) {
   return Object.keys(data)
@@ -8,6 +9,7 @@ function encode(data) {
 }
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const [status, setStatus] = useState(null); // "success" | "error" | null
 
   const handleSubmit = async (event) => {
@@ -52,12 +54,9 @@ export default function ContactForm() {
           id="contact-title"
           className="text-3xl md:text-4xl font-bold dark:text-white mb-4 mt-10 "
         >
-          Contact
+          {t.contact.title}
         </h2>
-        <p className="dark:text-gray-300 mb-4">
-          You can send me a message using this form. I will get back to you as
-          soon as possible.
-        </p>
+        <p className="dark:text-gray-300 mb-4">{t.contact.description}</p>
 
         <form
           name="contact"
@@ -76,7 +75,7 @@ export default function ContactForm() {
           </p>
 
           <label className="flex flex-col gap-1 text-sm dark:text-gray-200 2xl:text-xl">
-            Name
+            {t.contact.name}
             <input
               type="text"
               name="name"
@@ -86,7 +85,7 @@ export default function ContactForm() {
           </label>
 
           <label className="flex flex-col gap-1 text-sm dark:text-gray-200 2xl:text-xl">
-            Email
+            {t.contact.email}
             <input
               type="email"
               name="email"
@@ -96,7 +95,7 @@ export default function ContactForm() {
           </label>
 
           <label className="flex flex-col gap-1 text-sm dark:text-gray-200 2xl:text-xl">
-            Message
+            {t.contact.message}
             <textarea
               name="message"
               rows="4"
@@ -109,18 +108,14 @@ export default function ContactForm() {
             type="submit"
             className="mt-2 inline-flex justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors"
           >
-            Send
+            {t.contact.submit}
           </button>
 
           {status === "success" && (
-            <p className="text-green-400 text-sm mt-2">
-              Thank you for your message, it has been successfully sent ✨
-            </p>
+            <p className="text-green-400 text-sm mt-2">{t.contact.success}</p>
           )}
           {status === "error" && (
-            <p className="text-red-400 text-sm mt-2">
-              Oops, something went wrong. You can try again a bit later.
-            </p>
+            <p className="text-red-400 text-sm mt-2">{t.contact.failed}</p>
           )}
         </form>
       </div>
