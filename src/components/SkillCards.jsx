@@ -7,7 +7,7 @@ export default function SkillCards({ title, src }) {
         className="h-25 md:h-50 object-contain"
         loading="lazy"
       />
-      <p className="text-black font-bold lg:text-lg">{title}</p>
+      <p className="text-black dark:text-white font-bold lg:text-lg">{title}</p>
     </div>
   );
 }
