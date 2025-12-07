@@ -2,6 +2,7 @@ import { useLanguage } from "../hooks/useLanguage";
 
 export default function ProjectPage({ project, onBack }) {
   const { lang } = useLanguage();
+  const { t } = useLanguage();
 
   // Traductions spécifiques au projet (si elles existent)
   const tr = project.translations?.[lang];
@@ -34,7 +35,7 @@ export default function ProjectPage({ project, onBack }) {
             d="M15 19l-7-7 7-7"
           />
         </svg>
-        Back
+        {t.back}
       </button>
 
       <header className="relative h-96 overflow-hidden select-none">
@@ -61,7 +62,7 @@ export default function ProjectPage({ project, onBack }) {
         >
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">
-              About the project
+              {t.projects.about}
             </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
               {description}
@@ -69,14 +70,18 @@ export default function ProjectPage({ project, onBack }) {
           </section>
 
           <section className="border-b border-white">
-            <h2 className="text-4xl font-bold text-white mb-6">Context</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              {t.projects.context}
+            </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
               {context}
             </p>
           </section>
 
           <section className="border-b border-white">
-            <h2 className="text-4xl font-bold text-white mb-6">Objectives</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              {t.projects.objectives}
+            </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
               {objectives}
             </p>
@@ -84,7 +89,7 @@ export default function ProjectPage({ project, onBack }) {
 
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Skills Developed
+              {t.projects.skills}
             </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
               {skills}
@@ -92,7 +97,9 @@ export default function ProjectPage({ project, onBack }) {
           </section>
 
           <section className="border-b border-white">
-            <h2 className="text-4xl font-bold text-white mb-6">Results</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              {t.projects.results}
+            </h2>
             <p className="text-gray-300 text-xl leading-relaxed mb-16">
               {results}
             </p>
@@ -100,7 +107,9 @@ export default function ProjectPage({ project, onBack }) {
         </div>
 
         <section className="mb-16 mt-16 flex flex-col gap-4 select-none">
-          <h3 className="text-4xl font-bold text-white mb-6">Technologies</h3>
+          <h3 className="text-4xl font-bold text-white mb-6">
+            {t.projects.technologies}
+          </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {project.tech.map((tech) => (
               <span
@@ -115,7 +124,7 @@ export default function ProjectPage({ project, onBack }) {
 
         <section className="w-screen">
           <h3 className="text-4xl font-bold text-white mb-6 select-none">
-            Links
+            {t.projects.link}
           </h3>
 
           {project.links.map((link) => {

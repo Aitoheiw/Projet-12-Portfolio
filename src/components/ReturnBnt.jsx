@@ -1,4 +1,6 @@
+import { useLanguage } from "../hooks/useLanguage";
 export default function ReturnBnt() {
+  const { t } = useLanguage();
   return (
     <button
       onClick={() => window.history.back()}
@@ -17,7 +19,7 @@ export default function ReturnBnt() {
           d="M15 19l-7-7 7-7"
         />
       </svg>
-      Back
+      {t.back}
     </button>
   );
 }

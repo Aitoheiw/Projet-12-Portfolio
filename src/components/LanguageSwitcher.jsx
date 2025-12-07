@@ -15,8 +15,8 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("en")}
         className={`px-2 py-1 text-xs rounded transition ${
           lang === "en"
-            ? "font-bold underline text-white"
-            : "text-gray-400 hover:text-white"
+            ? "font-bold underline dark:text-white"
+            : "text-gray-400 dark:hover:text-white hover:text-zinc-800"
         }`}
       >
         EN
@@ -28,8 +28,8 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("fr")}
         className={`px-2 py-1 text-xs rounded transition ${
           lang === "fr"
-            ? "font-bold underline text-white"
-            : "text-gray-400 hover:text-white"
+            ? "font-bold underline dark:text-white"
+            : "text-gray-400 dark:hover:text-white hover:text-zinc-800"
         }`}
       >
         FR
@@ -41,8 +41,8 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("ko")}
         className={`px-2 py-1 text-xs rounded transition ${
           lang === "ko"
-            ? "font-bold underline text-white"
-            : "text-gray-400 hover:text-white"
+            ? "font-bold underline dark:text-white"
+            : "text-gray-400 dark:hover:text-white hover:text-zinc-800"
         }`}
       >
         KO

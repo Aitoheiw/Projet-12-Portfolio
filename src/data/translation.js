@@ -7,11 +7,21 @@ export const translations = {
     header: {
       subtitle: "Scroll Down to discover my projects",
     },
+    back: "Back",
     about: {
       title: "About",
       text: "I am a front-end developer passionate about clean and modern interfaces.",
     },
     skills: "skills",
+    projects: {
+      about: "About the project",
+      context: "Context",
+      objectives: "Objectives",
+      skills: "Skills developed",
+      results: "Results",
+      technologies: "Technologies used",
+      link: "Links",
+    },
     contact: {
       title: "Contact",
       description:
@@ -32,11 +42,21 @@ export const translations = {
     header: {
       subtitle: "Faites défiler pour découvrir mes projets",
     },
+    back: "Retour",
     about: {
       title: "À propos",
       text: "Je suis un développeur front-end passionné par les interfaces modernes et épurées.",
     },
     skills: "Compétences",
+    projects: {
+      about: "À propos du projet",
+      context: "Contexte",
+      objectives: "Objectifs",
+      skills: "Compétences développées",
+      results: "Résultats",
+      technologies: "Technologies utilisées",
+      link: "Liens",
+    },
     contact: {
       title: "Contact",
       description:
@@ -58,11 +78,21 @@ export const translations = {
     header: {
       subtitle: "아래로 스크롤해서 제 프로젝트를 확인해 주세요",
     },
+    back: "뒤로",
     about: {
       title: "소개",
       text: "깔끔하고 현대적인 인터페이스를 만드는 것을 좋아하는 프론트엔드 개발자입니다.",
     },
     skills: "기술 스택",
+    projects: {
+      about: "프로젝트 소개",
+      context: "컨텍스트",
+      objectives: "목표",
+      skills: "개발한 역량",
+      results: "결과",
+      technologies: "사용된 기술",
+      link: "링크",
+    },
     contact: {
       title: "연락처",
       description: "이 폼으로 메시지를 보내주세요. 최대한 빨리 답장드릴게요",
