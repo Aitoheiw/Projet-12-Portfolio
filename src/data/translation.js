@@ -11,6 +11,8 @@ export const translations = {
     about: {
       title: "About",
       text: "I am a front-end developer passionate about clean and modern interfaces.",
+      description:
+        "After several professional setbacks, I decided to turn toward my passion: web development. I then began teaching myself before joining the Web Integrator program at OpenClassrooms.",
     },
     skills: "skills",
     projects: {
@@ -46,6 +48,8 @@ export const translations = {
     about: {
       title: "À propos",
       text: "Je suis un développeur front-end passionné par les interfaces modernes et épurées.",
+      description:
+        "Après plusieurs échecs professionnels, j’ai décidé de me tourner vers ma passion : le développement web. J’ai alors commencé à me former en autodidacte avant de rejoindre la formation Intégrateur Web d’OpenClassrooms.",
     },
     skills: "Compétences",
     projects: {
@@ -82,6 +86,8 @@ export const translations = {
     about: {
       title: "소개",
       text: "깔끔하고 현대적인 인터페이스를 만드는 것을 좋아하는 프론트엔드 개발자입니다.",
+      description:
+        "여러 번의 직업적 실패를 겪은 후, 저는 제 열정인 웹 개발에 도전하기로 결심했습니다. 그 후 독학으로 공부를 시작했고, 이후 OpenClassrooms의 웹 통합(Integrateur Web) 과정에 참여하게 되었습니다.",
     },
     skills: "기술 스택",
     projects: {

@@ -9,6 +9,7 @@ export default function About() {
 
       <div className="flex flex-col pb-10 text-xl md:text-2xl gap-5 font-bold pl-4 pr-4">
         <p>{t.about.text}</p>
+        <p>{t.about.description}</p>
       </div>
     </section>
   );

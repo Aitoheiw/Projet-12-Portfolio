@@ -48,7 +48,7 @@ export default function ContactForm() {
       className="w-screen h-screen mx-auto lg:pt-6  flex flex-col gap-6 bg-white  dark:bg-zinc-800"
       aria-labelledby="contact-title"
     >
-      <div className="max-w-5xl w-full mx-auto h-full lg:h-fit lg:pb-6 px-6 flex flex-col gap-6 bg-zinc-100 dark:bg-zinc-800 lg:rounded-3xl">
+      <div className="max-w-5xl w-full mx-auto h-full lg:h-fit lg:pb-6 px-6 flex flex-col gap-6 dark:bg-zinc-800 lg:rounded-3xl">
         <ReturnBnt />
         <h2
           id="contact-title"
@@ -64,7 +64,7 @@ export default function ContactForm() {
           data-netlify="true"
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 bg-zinc-200 dark:bg-white/5 p-6 rounded-xl backdrop-blur-sm"
+          className="flex flex-col gap-4 bg-zinc-100 dark:bg-white/5 p-6 rounded-xl backdrop-blur-sm"
         >
           {/* Champs cachés pour Netlify */}
           <input type="hidden" name="form-name" value="contact" />

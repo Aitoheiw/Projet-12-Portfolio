@@ -29,7 +29,7 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 md:bottom-12 md:right-32 z-50 p-2 md:p-4 rounded-full bg-white/20 dark:bg-white/30 hover:bg-white/30 text-white  backdrop-blur-lg shadow-lg transition-all duration-300 flex items-center justify-center animate-bounce mix-blend-difference"
+      className="fixed bottom-8 right-1 md:bottom-12 md:right-10 z-50 p-2 md:p-4 rounded-full bg-white/80 dark:bg-white/30 hover:bg-white/30 dark:text-white  backdrop-blur-lg shadow-lg transition-all duration-300 flex items-center justify-center animate-bounce"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
