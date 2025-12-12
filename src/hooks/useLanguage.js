@@ -5,7 +5,6 @@ import { LanguageContext } from "../context/LanguageContext";
 export function useLanguage() {
   const ctx = useContext(LanguageContext);
   if (!ctx) {
-    // debug plus propre : ça t'évite juste un "undefined" silencieux
     throw new Error("useLanguage must be used inside a LanguageProvider");
   }
   return ctx;

@@ -8,6 +8,7 @@ import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -70,6 +71,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen pt-8 bg-white dark:bg-zinc-800 dark:text-white">
+      <LanguageSwitcher />
       <Nav />
       <main>
         <Header />

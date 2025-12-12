@@ -10,14 +10,14 @@ function encode(data) {
 
 export default function ContactForm() {
   const { t } = useLanguage();
-  const [status, setStatus] = useState(null); // "success" | "error" | null
+  const [status, setStatus] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
 
     const data = {
-      "form-name": form.getAttribute("name"), // "contact"
+      "form-name": form.getAttribute("name"),
       name: form.name.value,
       email: form.email.value,
       message: form.message.value,
@@ -30,9 +30,7 @@ export default function ContactForm() {
         body: encode(data),
       });
 
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
+      if (!response.ok) throw new Error("Form submission failed");
 
       setStatus("success");
       form.reset();
@@ -42,20 +40,38 @@ export default function ContactForm() {
     }
   };
 
+  const handleInvalid = (e) => {
+    const { validity, type } = e.target;
+
+    if (validity.valueMissing) {
+      e.target.setCustomValidity(t.contact.errors.required);
+    } else if (type === "email" && validity.typeMismatch) {
+      e.target.setCustomValidity(t.contact.errors.email);
+    } else {
+      e.target.setCustomValidity("");
+    }
+  };
+
+  const handleInput = (e) => {
+    e.target.setCustomValidity("");
+  };
+
   return (
     <section
       id="contact"
-      className="w-screen h-screen mx-auto lg:pt-6  flex flex-col gap-6 bg-white  dark:bg-zinc-800"
+      className="w-screen h-screen mx-auto lg:pt-6 flex flex-col gap-6 bg-white dark:bg-zinc-800"
       aria-labelledby="contact-title"
     >
       <div className="max-w-5xl w-full mx-auto h-full lg:h-fit lg:pb-6 px-6 flex flex-col gap-6 dark:bg-zinc-800 lg:rounded-3xl">
         <ReturnBnt />
+
         <h2
           id="contact-title"
-          className="text-3xl md:text-4xl font-bold dark:text-white mb-4 mt-10 "
+          className="text-3xl md:text-4xl font-bold dark:text-white mb-4 mt-10"
         >
           {t.contact.title}
         </h2>
+
         <p className="dark:text-gray-300 mb-4">{t.contact.description}</p>
 
         <form
@@ -66,8 +82,8 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 bg-zinc-100 dark:bg-white/5 p-6 rounded-xl backdrop-blur-sm"
         >
-          {/* Champs cachés pour Netlify */}
           <input type="hidden" name="form-name" value="contact" />
+
           <p className="hidden">
             <label>
               Ne pas remplir ce champ : <input name="bot-field" />
@@ -80,6 +96,8 @@ export default function ContactForm() {
               type="text"
               name="name"
               required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
               className="px-3 py-2 rounded-lg dark:bg-black/30 border dark:border-white/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </label>
@@ -90,6 +108,8 @@ export default function ContactForm() {
               type="email"
               name="email"
               required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
               className="px-3 py-2 rounded-lg dark:bg-black/30 border dark:border-white/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </label>
@@ -100,6 +120,8 @@ export default function ContactForm() {
               name="message"
               rows="4"
               required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
               className="px-3 h-62 py-2 rounded-lg dark:bg-black/30 border dark:border-white/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
             />
           </label>
@@ -112,7 +134,7 @@ export default function ContactForm() {
           </button>
 
           {status === "success" && (
-            <p className="text-green-400 text-sm mt-2">{t.contact.success}</p>
+            <p className="text-green-400 text-sm mt-2">{t.contact.sucess}</p>
           )}
           {status === "error" && (
             <p className="text-red-400 text-sm mt-2">{t.contact.failed}</p>
