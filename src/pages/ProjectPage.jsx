@@ -136,7 +136,9 @@ export default function ProjectPage({ project, onBack }) {
                 className="text-gray-300 text-sm md:text-xl mb-4 wrap-break-word pl-2 pr-2"
               >
                 <strong className="font-bold select-none">{label}:</strong>{" "}
-                <span>{url}</span>
+                <a href={url} target="_blank">
+                  {url}
+                </a>
               </p>
             );
           })}

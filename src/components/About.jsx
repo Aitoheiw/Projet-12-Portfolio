@@ -16,7 +16,15 @@ export default function About() {
         <p className="select-none">{t.about.text}</p>
         <p className="select-none">{t.about.description}</p>
         <p className="select-none">{t.about.ambition}</p>
-        <p>Linkedin : www.linkedin.com/in/lucas-charlet-0a0183231</p>
+        <p>
+          Linkedin :
+          <a
+            href="https://www.linkedin.com/in/lucas-charlet-0a0183231/"
+            target="_blank"
+          >
+            https://www.linkedin.com/in/lucas-charlet-0a0183231/
+          </a>
+        </p>
       </div>
     </section>
   );

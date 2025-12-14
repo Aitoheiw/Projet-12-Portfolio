@@ -59,7 +59,7 @@ const SLIDES = [
     },
 
     links: [
-      "GitHub: https://github.com/Aitoheiw/Projet_10_ArgentBank-Frontend",
+      "GitHub: https://github.com/Aitoheiw/Projet_10_ArgentBank_Charlet_Lucas",
     ],
   },
   {
