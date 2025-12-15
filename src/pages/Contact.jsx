@@ -65,12 +65,12 @@ export default function ContactForm() {
       <div className="max-w-5xl w-full mx-auto h-full lg:h-fit lg:pb-6 px-6 flex flex-col gap-6 dark:bg-zinc-800 lg:rounded-3xl">
         <ReturnBnt />
 
-        <h2
+        <h1
           id="contact-title"
           className="text-3xl md:text-4xl font-bold dark:text-white mb-4 mt-10"
         >
           {t.contact.title}
-        </h2>
+        </h1>
 
         <p className="dark:text-gray-300 mb-4">{t.contact.description}</p>
 

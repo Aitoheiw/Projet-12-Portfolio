@@ -45,7 +45,6 @@
     />
     <meta name="twitter:image" content="/public/Capture-Portfolio.png" />
   </head>
-
   <form
     name="contact"
     method="POST"
@@ -53,11 +52,22 @@
     netlify-honeypot="bot-field"
     hidden
   >
-    <input type="hidden" name="form-name" value="contact" />
-
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
+    <label type="hidden"
+      >form name
+      <input type="hidden" name="form-name" value="contact" />
+    </label>
+    <label type="hidden"
+      >name
+      <input type="text" name="name" />
+    </label>
+    <label type="hidden"
+      >email
+      <input type="email" name="email" />
+    </label>
+    <label type="hidden"
+      >message
+      <textarea name="message"></textarea>
+    </label>
   </form>
 
   <body>
