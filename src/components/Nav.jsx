@@ -22,13 +22,13 @@ export default function Nav() {
           </a>
         </li>
         <li>
-          <a href="#skills" className="nav-link">
-            {t.skills}
+          <a href="#projects" className="nav-link">
+            {t.nav.projects}
           </a>
         </li>
         <li>
-          <a href="#projects" className="nav-link">
-            {t.nav.projects}
+          <a href="#skills" className="nav-link">
+            {t.skills}
           </a>
         </li>
 
