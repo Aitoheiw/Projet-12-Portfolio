@@ -8,7 +8,6 @@ export default function ScrollToTopButton() {
       const scrollPosition = window.scrollY;
       const totalHeight = document.body.scrollHeight - window.innerHeight;
 
-      // Apparait après 80% du scroll
       setVisible(scrollPosition / totalHeight >= 0.6);
     };
     sessionStorage.removeItem("homeScroll");
@@ -29,7 +28,8 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-1 md:bottom-12 md:right-10 z-50 p-2 md:p-4 rounded-full bg-white/80 dark:bg-white/30 hover:bg-white/30 dark:text-white  backdrop-blur-lg shadow-lg transition-all duration-300 flex items-center justify-center animate-bounce"
+      className="fixed bottom-8 right-1 md:bottom-12 md:right-10 z-50 p-2 md:p-4 rounded-full bg-white/80 dark:bg-white/30 hover:bg-white/30 dark:text-white  backdrop-blur-lg shadow-lg transition-all duration-300 flex items-center justify-center animate-bounce focus:border-4 focus:border-blue-500 focus:outline-none"
+      aria-label="Go to top"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

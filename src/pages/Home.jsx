@@ -76,8 +76,8 @@ export default function Home() {
       <main>
         <Header />
         <About />
-        <Skills />
         <Cards onCardClick={handleCardClick} />
+        <Skills />
 
         <ScrollToTopButton />
       </main>

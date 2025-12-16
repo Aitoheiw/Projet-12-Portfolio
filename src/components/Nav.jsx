@@ -13,7 +13,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="select-none relative">
+    <nav className=" relative">
       {/* 🔹 Desktop menu */}
       <ul className="hidden md:flex justify-end gap-12 text-xl font-bold dark:text-white md:mr-5">
         <li>

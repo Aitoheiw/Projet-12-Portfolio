@@ -4,10 +4,8 @@ export default function ProjectPage({ project, onBack }) {
   const { lang } = useLanguage();
   const { t } = useLanguage();
 
-  // Traductions spécifiques au projet (si elles existent)
   const tr = project.translations?.[lang];
 
-  // Fallback : on utilise les champs originaux si pas de traduction
   const title = tr?.h2 || project.h2;
   const subtitle = tr?.h5 || project.h5;
   const description = tr?.description || project.description;
@@ -20,7 +18,7 @@ export default function ProjectPage({ project, onBack }) {
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
         onClick={onBack}
-        className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference select-none hover:cursor-pointer"
+        className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference hover:cursor-pointer "
       >
         <svg
           className="w-5 h-5"
@@ -38,7 +36,7 @@ export default function ProjectPage({ project, onBack }) {
         {t.back}
       </button>
 
-      <header className="relative h-96 overflow-hidden select-none">
+      <header className="relative h-96 overflow-hidden ">
         <img
           src={project.src}
           alt={title}
@@ -56,15 +54,12 @@ export default function ProjectPage({ project, onBack }) {
       </header>
 
       <main className=" flex flex-col items-center w-screen px-8 py-16">
-        <div
-          id="wrapper"
-          className="flex flex-col gap-16 max-w-4xl w-full select-none"
-        >
+        <div id="wrapper" className="flex flex-col gap-16 max-w-4xl w-full ">
           <section className="border-b border-white">
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.projects.about}
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-xl leading-relaxed mb-16">
               {description}
             </p>
           </section>
@@ -73,7 +68,7 @@ export default function ProjectPage({ project, onBack }) {
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.projects.context}
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-xl leading-relaxed mb-16">
               {context}
             </p>
           </section>
@@ -82,7 +77,7 @@ export default function ProjectPage({ project, onBack }) {
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.projects.objectives}
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-xl leading-relaxed mb-16">
               {objectives}
             </p>
           </section>
@@ -91,7 +86,7 @@ export default function ProjectPage({ project, onBack }) {
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.projects.skills}
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-xl leading-relaxed mb-16">
               {skills}
             </p>
           </section>
@@ -100,13 +95,13 @@ export default function ProjectPage({ project, onBack }) {
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.projects.results}
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-xl leading-relaxed mb-16">
               {results}
             </p>
           </section>
         </div>
 
-        <section className="mb-16 mt-16 flex flex-col gap-4 select-none">
+        <section className="mb-16 mt-16 flex flex-col gap-4">
           <h3 className="text-4xl font-bold text-white mb-6">
             {t.projects.technologies}
           </h3>
@@ -123,7 +118,7 @@ export default function ProjectPage({ project, onBack }) {
         </section>
 
         <section className="w-screen">
-          <h3 className="text-4xl font-bold text-white mb-6 select-none">
+          <h3 className="text-4xl font-bold text-white mb-6">
             {t.projects.link}
           </h3>
 
@@ -133,10 +128,10 @@ export default function ProjectPage({ project, onBack }) {
             return (
               <p
                 key={link}
-                className="text-gray-300 text-sm md:text-xl mb-4 wrap-break-word pl-2 pr-2"
+                className="text-gray-200 text-sm md:text-xl mb-4 wrap-break-word pl-2 pr-2"
               >
-                <strong className="font-bold select-none">{label}:</strong>{" "}
-                <a href={url} target="_blank">
+                <strong className="font-bold">{label}:</strong>{" "}
+                <a href={url} target="_blank" className="text-gray-200">
                   {url}
                 </a>
               </p>

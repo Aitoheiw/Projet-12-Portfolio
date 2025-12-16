@@ -99,6 +99,7 @@ export default function ContactForm() {
               onInvalid={handleInvalid}
               onInput={handleInput}
               className="px-3 py-2 rounded-lg dark:bg-black/30 border dark:border-white/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              autoComplete="name"
             />
           </label>
 
@@ -111,6 +112,7 @@ export default function ContactForm() {
               onInvalid={handleInvalid}
               onInput={handleInput}
               className="px-3 py-2 rounded-lg dark:bg-black/30 border dark:border-white/10 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              autoComplete="email"
             />
           </label>
 
