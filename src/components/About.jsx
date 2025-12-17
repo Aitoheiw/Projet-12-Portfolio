@@ -20,7 +20,8 @@ export default function About() {
             href="https://www.linkedin.com/in/lucas-charlet-0a0183231/"
             target="_blank"
           >
-            https://www.linkedin.com/in/lucas-charlet-0a0183231/
+            https://www.linkedin.com/ <br className="md:hidden" />
+            in/lucas-charlet-0a0183231/
           </a>
         </p>
       </div>

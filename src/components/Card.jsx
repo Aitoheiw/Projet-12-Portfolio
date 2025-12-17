@@ -2,20 +2,19 @@ import { useState } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { Link } from "react-router-dom";
 
-export default function Card({ src, h2, p, translations, id, onClick }) {
+export default function Card({ src, h2, p, translations, id }) {
   const [isHovered, setIsHovered] = useState(false);
   const { lang } = useLanguage();
 
   const t = translations?.[lang] || { h2, p };
 
   return (
-    <li>
-      <button
-        onClick={() => onClick?.(id)}
-        className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-100 focus:border-4 focus:border-blue-500 focus:outline-none"
+    <li className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-100">
+      <Link
+        to={`/projects/${id}`}
+        className="focus:border-4 focus:border-blue-500 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer max-w-100 focus:outline-none block"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick?.(id)}
       >
         <img
           src={src}
@@ -37,7 +36,7 @@ export default function Card({ src, h2, p, translations, id, onClick }) {
             <p className="text-sm md:text-xl text-gray-200">{t.p}</p>
           </div>
         </div>
-      </button>
+      </Link>
     </li>
   );
 }

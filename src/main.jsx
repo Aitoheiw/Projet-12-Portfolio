@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import NotFound from "./pages/404.jsx";
 import ContactForm from "./pages/Contact.jsx";
 import { LanguageProvider } from "./context/LanguageContext";
+import ProjectPage from "./pages/ProjectPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
       <LanguageProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

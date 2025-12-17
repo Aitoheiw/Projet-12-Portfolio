@@ -10,14 +10,14 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <ul className="flex items-center gap-2">
+    <ul className="flex items-center gap-2 w-fit relative left-2 top-2 md:left-10">
       <li>
         <button
           onClick={() => changeLang("en")}
-          className={`px-2 py-1 text-xs rounded transition ${
+          className={` py-1 text-xs rounded transition ${
             lang === "en"
               ? "font-bold underline dark:text-white"
-              : "text-gray-600 dark:text-zinc-200 dark:hover:text-white hover:text-zinc-800"
+              : "text-gray-600 dark:text-zinc-200 dark:hover:text-white hover:text-zinc-800 hover:cursor-pointer"
           }`}
         >
           EN
@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
           className={`px-2 py-1 text-xs rounded transition ${
             lang === "fr"
               ? "font-bold underline dark:text-white"
-              : "text-gray-600 dark:hover:text-white dark:text-zinc-200 hover:text-zinc-800"
+              : "text-gray-600 dark:hover:text-white dark:text-zinc-200 hover:text-zinc-800 hover:cursor-pointer"
           }`}
         >
           FR
@@ -48,7 +48,7 @@ export default function LanguageSwitcher() {
           className={`px-2 py-1 text-xs rounded transition ${
             lang === "ko"
               ? "font-bold underline dark:text-white"
-              : "text-gray-600 dark:hover:text-white dark:text-zinc-200 hover:text-zinc-800"
+              : "text-gray-600 dark:hover:text-white dark:text-zinc-200 hover:text-zinc-800 hover:cursor-pointer"
           }`}
         >
           KO

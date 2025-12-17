@@ -1,8 +1,25 @@
+import { useEffect } from "react";
 import { useLanguage } from "../hooks/useLanguage";
+import { useParams, useNavigate } from "react-router-dom";
+import projet from "../data/projet";
+import NotFound from "./404";
 
-export default function ProjectPage({ project, onBack }) {
+export default function ProjectPage({ project: propProject, onBack }) {
   const { lang } = useLanguage();
   const { t } = useLanguage();
+  const { id } = useParams();
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const project =
+    propProject ?? (id !== undefined ? projet[Number(id)] : undefined);
+  if (!project) {
+    return <NotFound />;
+  }
+
+  const handleBack = onBack ?? (() => navigate(-1));
 
   const tr = project.translations?.[lang];
 
@@ -17,7 +34,7 @@ export default function ProjectPage({ project, onBack }) {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 w-screen">
       <button
-        onClick={onBack}
+        onClick={handleBack}
         className="fixed top-8 left-8 z-50 px-6 py-3 bg-black/60 md:bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 flex items-center gap-2 md:mix-blend-difference hover:cursor-pointer "
       >
         <svg

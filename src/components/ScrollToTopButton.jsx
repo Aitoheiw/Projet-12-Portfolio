@@ -8,7 +8,7 @@ export default function ScrollToTopButton() {
       const scrollPosition = window.scrollY;
       const totalHeight = document.body.scrollHeight - window.innerHeight;
 
-      setVisible(scrollPosition / totalHeight >= 0.6);
+      setVisible(scrollPosition / totalHeight >= 0.2);
     };
     sessionStorage.removeItem("homeScroll");
 

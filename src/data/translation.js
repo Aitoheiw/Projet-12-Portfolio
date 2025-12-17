@@ -12,7 +12,7 @@ export const translations = {
       title: "About",
       text: "I am a front-end developer passionate about clean and modern interfaces.",
       description:
-        "After several professional experiences, I decided to turn toward my passion: web development. I first began learning on my own before joining the Web Integrator training program at OpenClassrooms.",
+        "After several professional experiences, I decided to turn toward my passion: development. I first began learning on my own before joining the Web Integrator training program at OpenClassrooms.",
       ambition:
         "My goal is to constantly grow, expand my skills, and contribute to projects that combine creativity, performance, and impact.",
     },
@@ -55,7 +55,7 @@ export const translations = {
       title: "À propos",
       text: "Je suis un développeur front-end passionné par les interfaces modernes et épurées.",
       description:
-        "Après plusieurs experiences professionnels, j’ai décidé de me tourner vers ma passion : le développement web. J’ai alors commencé à me former en autodidacte avant de rejoindre la formation Intégrateur Web d’OpenClassrooms.",
+        "Après plusieurs experiences professionnels, j’ai décidé de me tourner vers ma passion : le développement. J’ai alors commencé à me former en autodidacte avant de rejoindre la formation Intégrateur Web d’OpenClassrooms.",
       ambition:
         "Mon objectif est d’évoluer constamment, d’élargir mes compétences et de contribuer à des projets qui allient créativité, performance et impact.",
     },
@@ -99,7 +99,7 @@ export const translations = {
       title: "소개",
       text: "깔끔하고 현대적인 인터페이스를 만드는 것을 좋아하는 프론트엔드 개발자입니다.",
       description:
-        "여러 차례의 직업적 경험을 쌓은 후, 나는 나의 열정인 웹 개발 분야로 방향을 전환하기로 결정했다. 이후 독학으로 학습을 시작한 뒤 OpenClassrooms의 웹 통합자(Web Integrator) 과정에 합류했다.",
+        "여러 직무 경험을 쌓은 후, 나는 나의 열정인 개발 분야로 방향을 바꾸기로 결심했다. 그 후 독학으로 공부를 시작했고, 이후 OpenClassrooms의 웹 통합자(Web Integrator) 교육 과정에 합류했다.",
       ambition:
         "저의 목표는 꾸준히 발전하고 역량을 넓혀, 창의성·성능·임팩트를 모두 갖춘 프로젝트에 기여하는 것입니다.",
     },

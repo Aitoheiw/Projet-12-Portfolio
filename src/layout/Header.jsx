@@ -6,7 +6,7 @@ export default function Header() {
       <h1 className="text-3xl md:text-5xl font-bold  dark:text-white mb-4">
         Lucas Charlet
       </h1>
-      <p className="dark:text-gray-400 text-lg">{t.header.subtitle}</p>
+      <p className="dark:text-gray-300 text-lg">{t.header.subtitle}</p>
     </header>
   );
 }

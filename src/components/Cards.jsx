@@ -2,7 +2,7 @@ import Card from "./Card";
 import projet from "../data/projet";
 import { useLanguage } from "../hooks/useLanguage";
 
-export default function Cards({ onCardClick }) {
+export default function Cards() {
   const { t } = useLanguage();
   return (
     <section className=" items-center bg-[#f5f5f7] dark:bg-neutral-700/50 mt-4 pt-10 flex- pb-20 mx-4 md:mx-6">
@@ -11,9 +11,7 @@ export default function Cards({ onCardClick }) {
       </h2>
       <ul className="flex gap-12 justify-center flex-wrap mx-4 md:mx-6">
         {projet.map((slide, index) => {
-          return (
-            <Card key={index} {...slide} id={index} onClick={onCardClick} />
-          );
+          return <Card key={index} {...slide} id={index} />;
         })}
       </ul>
     </section>

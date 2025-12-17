@@ -19,7 +19,7 @@ body {
 
 body {
   place-items: center;
-  min-width: 320px;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: light) {
