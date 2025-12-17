@@ -9,25 +9,26 @@ import Skills from "../components/Skills";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 
 export default function Home() {
-  // Restore Home scroll position only when returning to Home
   useEffect(() => {
     const restoreFlag = sessionStorage.getItem("homeScrollRestore");
     const saved = sessionStorage.getItem("homeScroll");
+
     if (restoreFlag === "1" && saved) {
       const y = parseInt(saved, 10);
       if (!Number.isNaN(y)) {
         requestAnimationFrame(() => window.scrollTo(0, y));
       }
     }
-    // Clear the flag so a fresh visit doesn't restore scroll
+
     sessionStorage.removeItem("homeScrollRestore");
 
-    // On leaving Home, save the current position and set the flag
     return () => {
       try {
         sessionStorage.setItem("homeScroll", String(window.scrollY));
         sessionStorage.setItem("homeScrollRestore", "1");
-      } catch {}
+      } catch (error) {
+        console.warn("SessionStorage unavailable:", error);
+      }
     };
   }, []);
 
